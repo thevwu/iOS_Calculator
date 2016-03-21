@@ -178,7 +178,7 @@ struct Stack<Element> {
     }
     
     mutating func popAll() {
-        if(!isEmpty()) {
+        while(!isEmpty()) {
             self.pop()
         }
     }
@@ -190,7 +190,7 @@ struct Stack<Element> {
         return true
     }
     
-    mutating func peek() -> Element? {
+    func peek() -> Element? {
         return items.last
     }
 }
